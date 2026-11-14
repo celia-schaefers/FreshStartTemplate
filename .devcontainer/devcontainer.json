@@ -1,0 +1,32 @@
+{
+  // FreshStart starter: the setup every codespace made from this repo gets.
+  "name": "FreshStart starter",
+
+  // GitHub's default "universal" image: fast to start, includes Python + Node,
+  // and doesn't count against your Codespaces storage.
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+
+  "customizations": {
+    // Files that open automatically when the codespace starts.
+    "codespaces": {
+      "openFiles": ["index.html", "README.md"]
+    },
+    "vscode": {
+      // Live Preview: right-click index.html → "Show Preview".
+      "extensions": ["ms-vscode.live-server"],
+      "settings": {
+        // Open the preview in a browser tab (the in-editor preview can be blank in Codespaces).
+        "livePreview.openPreviewTarget": "External Browser",
+        // Beginners forget to save, so save automatically.
+        "files.autoSave": "afterDelay",
+        // Keep teammates' changes visible in Source Control.
+        "git.autofetch": true
+      }
+    }
+  },
+
+  // Live Preview serves on port 3000; open it in a new tab when it starts.
+  "portsAttributes": {
+    "3000": { "label": "Website preview", "onAutoForward": "openBrowser" }
+  }
+}
